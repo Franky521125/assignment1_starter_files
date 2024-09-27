@@ -72,6 +72,8 @@
     min-height: 100vh; /* Minimum height is the viewport height */
     padding: 20px;
     box-sizing: border-box; 
+    background-image: url('images/flourish.png');
+    background-size: contain;
 }
 
 h2 {
