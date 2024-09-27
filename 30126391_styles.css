@@ -115,6 +115,9 @@
 
 /* Small Mobile Devices (up to 639px) */
 @media (max-width: 639px) {
+    .hero-section {
+        background-image: url('images/myback-extra-small.jpg'); /* Medium image for tablets */
+    }
     .logo-container img {
         max-width: 80px; /* Even smaller logo for very small devices */
     }
