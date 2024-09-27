@@ -167,18 +167,29 @@ button:hover {
 
 /* About Section */
 .about-section {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     background-color: #30275c;
     color: white;
+    padding: 2rem; /* Add padding for better spacing */
+    text-align: center; /* Center the text */
 }
-
 .about-section a:visited {
     color: red; /* Make visited link red */
 }
 
 /* CTA Section */
 .cta-section {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     background-color: #30275c;
     color: white;
+    padding: 2rem; /* Add padding for better spacing */
+    text-align: center; /* Center the text */
 }
 
 .cta-section button {
