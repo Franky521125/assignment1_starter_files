@@ -23,24 +23,52 @@
         <div class="hero-content">
             <h1>Welcome to rocket VPN</h1>
             <p>Fast,Secure,and Reliable VPN for All Your Needs</p>
-            <a href="#" class="cta-button">Get Started</a>
+            <a href="#features" class="cta-button">Get Started</a>
         </div>
         <!-- This section should have a background image behind the Welcome to Application -->
     </header>
 <!-- I really wish we could have a flourish in the background of these feature-section -->
 
     <!-- Each of these sections should have colours that compliment the colour of our background image and the foreground image -->
-    <section class="features-section">
-        <article class="feature">
+    <section class="features-section" id="features">
+        <div class="Reasons">
             <h2>Top 5 Reasons to Choose Us</h2>
             <p>Why choose us? 1. Quality Assurance, 2. 24/7 Customer Support, 3. Affordable Pricing, 4. Expert Team, 5. Fast Delivery</p>
-        </article>
-        <article class="feature">
-            <h2>Our Products Include</h2>
-            <p>&#x2022; Advanced Technology<br>&#x2022; 100% Reliable<br>&#x2022; Cost-effective<br>&#x2022; User-friendly</p>
-            <button>Shop Now!</button>
-        </article>
+        </div>
+
+
+        <h2>Our Products Include</h2>
+        <div class="feature">
+            
+           
+            <div class = "fea">
+                <div class="fea-pic "><img src="images/tech.jpg" alt="pic"></div>
+                <h3>Advanced Technology</h3>
+                <p>Take advantage of our fastest ever vpn connection</p>
+            </div>
+            <div class="fea">
+                <div class="fea-pic "><img src="images/lock.jpg" alt="pic"></div>
+                <h3>100& Reliable</h3>
+                 <p>We make sure that our connection is 100 percent reliable all the time</p>
+            </div>
+            <div class = "fea"> 
+                <div class="fea-pic "><img src="images/money.jpg" alt="pic"></div>
+                <h3> Cost-effective</h3>
+                <p>We provide the lowest price on the market</p>
+            </div>
+            <div class = "fea">
+                <div class="fea-pic "><img src="images/user.jpg" alt="pic"></div>
+                <h3>User-friendly</h3>
+                <p>We provide the most User-friendly application </p>
+            </div>
+        
+            
+        </div>
+        <div><button>Shop Now!</button></div>
     </section>
+
+
+
     <section class="about-section">
         <h2>About Us</h2>
         <p>Information about the company.</p>
@@ -48,10 +76,27 @@
         <!-- Insert the company image here, it's in the images directory called image-<size>.png -->
             <img src="images/image-large.png" alt="Company Image">
     </section>
+    
+    
+    
     <footer class="cta-section">
         <h2>Contact Us</h2>
         <p>Get in touch for more information.</p>
         <button>Contact Us</button>
     </footer>
+    
+    
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
