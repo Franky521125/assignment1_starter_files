@@ -23,6 +23,7 @@
     max-width: 150px; /* Default logo size */
     height: auto; /* Maintain aspect ratio */
 }
+
 .logo-text {
     font-size: 1.5rem; /* Adjust font size for the logo text */
     color: white; /* White color for contrast */
@@ -63,17 +64,143 @@
     background-color: #ff3b3b; /* Slightly darker red on hover */
 }
 
-/* Responsive Media Queries */
+/* Features Section */
+.features-section {
+    background-color: #30275c;
+    color: white;
+    height: 100vh;
+    
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Flexbox for overall alignment */
+.feature {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 0 2rem;
+    border: none;
+}
+
+/* Grid Layout for .fea content */
+.fea {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 16rem;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth transformation */
+}
+
+.feature > .fea:hover {
+    transform: translateY(-10px); /* Hover effect */
+    border-color: #007bff;
+}
+
+.fea h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    color: white;
+}
+
+/* Flexbox for image and text alignment within .fea */
+.fea-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fea-pic img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+/* Pseudo-elements for stylistic details */
+.fea h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 0.5rem auto 0;
+}
+
+/* Pseudo-classes for hover state styling */
+.fea:hover h3 {
+    color: #007bff;
+}
+
+.fea p {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+button {
+    background-color: #007bff; /* Primary blue color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 0.75rem 1.5rem; /* Padding for size */
+    margin-top: 2%;
+    font-size: 1rem; /* Text size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Pseudo class selector for hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+
+/* About Section */
+.about-section {
+    background-color: #30275c;
+    color: white;
+}
+
+.about-section a:visited {
+    color: red; /* Make visited link red */
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #30275c;
+    color: white;
+}
+
+.cta-section button {
+    margin-bottom: 2%;
+}
 
 /* Responsive Media Queries */
 
 /* Extra Large Screens (2560px and above) */
 @media (min-width: 2560px) {
     .hero-section {
-        background-image: url('images/myback-extra-large.jpg'); /* Medium image for tablets */
+        background-image: url('images/myback-extra-large.jpg'); /* Large image for very large screens */
     }
+
     .hero-content h1 {
         font-size: 4rem; /* Larger heading for very large screens */
+    }
+
+    .fea-pic img {
+        width: 100%;
+        height: auto;
+        max-height: 220px; /* Set max height for extra large screens */
     }
 }
 
@@ -82,92 +209,88 @@
     .hero-section {
         background-image: url('images/myback-large.png'); /* Medium image for tablets */
     }
+
     .hero-content h1 {
         font-size: 3.5rem; /* Large heading for 1920px screens */
+    }
+
+    .fea-pic img {
+        width: 100%;
+        height: auto;
+        max-height: 200px; /* Set max height for large screens */
     }
 }
 
 /* Desktops (1024px to 1919px) */
 @media (min-width: 1024px) and (max-width: 1919px) {
     .hero-section {
-        background-image: url('images/myback-medium.jpg'); /* Medium image for tablets */
+        background-image: url('images/myback-medium.jpg'); /* Medium image for desktops */
     }
+
     .hero-content h1 {
         font-size: 3rem; /* Standard heading size */
+    }
+
+    .fea-pic img {
+        width: 100%;
+        height: auto;
+        max-height: 200px; /* Set max height for medium screens */
     }
 }
 
 /* Tablets (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .hero-section {
-        background-image: url('images/myback-medium.jpg'); /* medium image for tablets */
+        background-image: url('images/myback-medium.jpg'); /* Medium image for tablets */
     }
+
     .hero-content h1 {
         font-size: 2.5rem; /* Smaller heading for tablets */
+    }
+
+    .fea-pic img {
+        width: 100%;
+        height: auto;
+        max-height: 180px; /* Set max height for medium screens */
     }
 }
 
 /* Mobile Devices (640px to 767px) */
 @media (max-width: 640px) {
     .hero-section {
-        background-image: url('images/myback-small.jpg'); /* small image for phone */
+        background-image: url('images/myback-small.jpg'); /* Small image for phones */
     }
+
     .hero-content h1 {
         font-size: 2rem; /* Smaller heading on mobile */
     }
+
     .cta-button {
         font-size: 1rem; /* Smaller button on mobile */
+    }
+
+    .fea-pic img {
+        width: 100%;
+        height: auto;
+        max-height: 160px; /* Set max height for small screens */
     }
 }
 
 /* Small Mobile Devices (up to 639px) */
 @media (max-width: 639px) {
     .hero-section {
-        background-image: url('images/myback-extra-small.jpg'); /* xsmall image for phone */
+        background-image: url('images/myback-extra-small.jpg'); /* Extra small image for phones */
     }
+
     .logo-container img {
         max-width: 80px; /* Even smaller logo for very small devices */
     }
+
+    .fea-pic img {
+        width: 100%;
+        height: auto;
+        max-height: 160px; /* Set max height for extra small screens */
+    }
 }
 
 
-/* styling for features part */
-.features-section
-{
-    background-color:#30275c;
-    color: white;
-}
-.features-section h2 {
-    margin-top : 10rem ; 
-    text-align:center;
-}
-.feature
-{
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
-    width: 94vw;
-    
-}
-
-.fea{
-    width: 16rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.fea h3{
-    font-size: 1.4rem;
-    text-align: center;
-}
-
-.fea-pic img
-{
-    width: 250px;
-    height:auto;
-    max-height: 200px;
-}
